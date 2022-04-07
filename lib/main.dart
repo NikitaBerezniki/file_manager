@@ -1,6 +1,8 @@
+import 'package:file_manager/conrollers/menu_controller.dart';
 import 'package:file_manager/resources/resources.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'screens/main/main_screen.dart';
 
 void main() {
@@ -20,7 +22,10 @@ class MyApp extends StatelessWidget {
               .apply(bodyColor: Colors.white),
           canvasColor: AppColor.secondaryColor),
       title: 'File manager app',
-      home: const MainScreen(),
+      // home: const MainScreen(),
+      home: MultiProvider(providers: [
+        ChangeNotifierProvider(create: (context) => MenuController())
+      ], child: const MainScreen()),
     );
   }
 }
