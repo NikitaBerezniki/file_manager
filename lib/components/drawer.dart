@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import '../resources/resources.dart';
 
 class DrawerWidget extends StatelessWidget {
@@ -10,8 +9,10 @@ class DrawerWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final _controller = ScrollController();
     return Drawer(
       child: SingleChildScrollView(
+        controller: _controller,
         child: Column(
           children: [
             DrawerHeader(child: Image.asset(AppImages.logo)),
