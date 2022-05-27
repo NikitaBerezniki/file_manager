@@ -6,11 +6,27 @@ import 'package:provider/provider.dart';
 import 'screens/main/main_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyApp1());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+            child: Column(
+          children: [Text('data')],
+        )),
+      ),
+    );
+  }
+}
+
+class MyApp1 extends StatelessWidget {
+  const MyApp1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

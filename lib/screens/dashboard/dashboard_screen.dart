@@ -53,9 +53,9 @@ class MainSectionWidget extends StatelessWidget {
         const AddFilesButton(),
         const SizedBox(height: 10),
         Responsive(
-            mobile: const GridViewWidget(
+            mobile: GridViewWidget(
               crossAxisCount: 2,
-              childAspectRatio: 1.8,
+              childAspectRatio: _size.width < 700 ? 1.8 : 2.8, //1.8
             ),
             tablet: const GridViewWidget(
               crossAxisCount: 4,
